@@ -1,0 +1,6 @@
+[submodule "repair-design-project"]
+	path = repair-design-project
+	url = https://github.com/Ogeidy/repair-design-project.git
+[submodule "theyalow"]
+	path = theyalow
+	url = https://github.com/Ogeidy/theyalow.git
