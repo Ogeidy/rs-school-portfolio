@@ -75,6 +75,21 @@ h3 {
     border-top: 2px solid black;
     margin-top: 20px;
 
+    &--panel {
+        max-height: 200px;
+        font-size: 20px;
+        overflow: hidden;
+        transition: max-height 0.5s linear;
+
+        ul {
+            list-style: none;
+
+            li {
+                margin-top: 15px;
+            }
+        }
+    }
+
     .btn {
         position: absolute;
         top: 0;
@@ -95,25 +110,13 @@ h3 {
     }
 
     .opener:not(:checked) ~ &--panel {
-        display: none;
+        max-height: 0;
     }
 
     .opener:not(:checked) + .btn:after {
         content: ">";
         display: block;
         transform: rotate(90deg);
-    }
-
-    &--panel {
-        font-size: 20px;
-
-        ul {
-            list-style: none;
-
-            li {
-                margin-top: 15px;
-            }
-        }
     }
 }
 
@@ -167,22 +170,49 @@ h3 {
     }
     
     .item_container {
+        position: relative;
         width: 80%;
         height: 500px;
         margin: 0 auto;
-        border: 1px solid black;
         box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.75);
+        border: 1px solid black;
+        overflow: hidden;
 
         .item {
+            position: absolute;
+            width: 100%;
             display: none;
             justify-content: space-around;
+            background: #f0f0ec;
+            box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.75);
 
             .description {
+                position: relative;
                 width: 50%;
                 padding: 10px;
 
                 .info {
-                    font-size: 20px;
+                    font-size: 25px;
+                    margin: 20px 10px;
+                    line-height: 35px;
+                }
+
+                .link {
+                    position: absolute;
+                    bottom: 15px;
+                    left: 15px;
+                    padding: 5px 10px;
+                    background: while;
+                    border: 1px solid black;
+                    border-radius: 5px;
+                    font-size: 30px;
+                    text-decoration: none;
+                    color: black;
+                    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.75);
+                }
+
+                .link:hover {
+                    background: #d1d1d1;
                 }
             }
 
@@ -197,5 +227,33 @@ h3 {
         .active {
             display: flex;
         }
+
+        .to_left {
+            animation: left_anim 1s ease-in-out;
+            z-index: 1;
+        }
+
+        .to_right {
+            animation: right_anim 1s ease-in-out;
+            z-index: 1;
+        }
+    }
+}
+
+@keyframes left_anim {
+    from {
+        left: 0%;
+    }
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes right_anim {
+    from {
+        right: 0%;
+    }
+    to {
+        right: -100%;
     }
 }
