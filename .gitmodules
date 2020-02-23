@@ -4,3 +4,6 @@
 [submodule "theyalow"]
 	path = theyalow
 	url = https://github.com/Ogeidy/theyalow.git
+[submodule "singolo"]
+	path = singolo
+	url = https://github.com/Ogeidy/singolo.git
