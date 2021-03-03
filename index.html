@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,400i,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+
+        <header class="header">
+            <h1>Yakov Mamontov</h1>
+            <figure class="avatar">
+                <img class="avatar--image" src="./assets/images/photo.jpg" alt="Yakov Mamontov" width="400">
+            </figure>
+            <div class="contacts">
+                    <table>
+                        <tr>
+                            <td>Email:</td>
+                            <td>yakov-mamontov@<wbr>yandex.ru</td>
+                        </tr>
+                        <tr>
+                            <td>Telegram:</td>
+                            <td>@mamontov_yakov</td>
+                        </tr>
+                        <tr>
+                            <td>GitHub:</td>
+                            <td><a href="https://github.com/Ogeidy">Ogeidy</a></td>
+                        </tr>
+                        <tr>
+                            <td>Discord:</td>
+                            <td>y.mamontov</td>
+                        </tr>
+                    </table>
+            </div>
+        </header>
+
+        <section class="education">
+            <h2>Education</h2>
+            <input type="checkbox" id="edu_opener" class="opener" hidden>
+            <label for="edu_opener" class="btn"></label>
+            <div class="education--panel">
+                <ul>
+                    <li>Peter the Great St. Petersburg Polytechnic University, Higher School of Software Engineering <br> <strong>Master's degree</strong><br> 2015 - 2017</li>
+                    <li>Peter the Great St. Petersburg Polytechnic University, Higher School of Software Engineering <br> <strong>Bachelor of Software Engineering</strong><br> 2011 - 2015</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="projects">
+            <h2>Projects</h2>
+            <div class="slider_container">
+                <div class="control left">
+                    <div class="arrow left">&lt;</div>
+                </div>
+                <div class="control right">
+                    <div class="arrow right">&gt;</div>
+                </div>
+                <div class="item_container">
+                    <div class="item active">
+                        <div class="description">
+                            <h3 class="title">Theyallow</h3>
+                            <div class="info">какой-нибудь текст</div>
+                        </div>
+                        <img class="preview" src="./assets/images/theyallow.png" alt="theyallow">
+                    </div>
+                    <div class="item">
+                        <div class="description">
+                            <h3 class="title">Repair design project</h3>
+                            <div class="info">какой-нибудь текст</div>
+                        </div>
+                        <img class="preview" src="./assets/images/repair-design.png" alt="repair-design">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
